@@ -46,7 +46,8 @@ class ComicsController extends Controller
      */
     public function show($id)
     {
-        //
+        @$volumi = Volume::find($title);
+        return view('comics.show', compact('volumi'));
     }
 
     /**
