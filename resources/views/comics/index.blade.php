@@ -13,6 +13,9 @@
                 {{-- <p>{{$volume->description}}</p> --}}
                 <p>Prezzo: {{$volume->price}}$</p>
                 <p>Data di pubblicazione: {{$volume->sale_date}}</p>
+                <div class="buttons_container">
+                    <a href="{{route("comics.show", $volume->id)}}"><button type="button" class="show_button">vedi</button></a>
+                </div>
             </div>
     @endforeach
     </div>
