@@ -17,7 +17,7 @@ class CreateVolumesTable extends Migration
             $table->id();
             $table->string('title', 150);
             $table->longText('description');
-            $table->longText('thumb');
+            $table->longText('thumb')->nullable();
             $table->integer('price');
             $table->string('series');
             $table->date('sale_date');

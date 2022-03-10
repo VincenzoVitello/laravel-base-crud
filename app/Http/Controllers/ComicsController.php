@@ -44,10 +44,10 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Volume $volumi)
+    public function show(Volume $comic)
     {
-        $volumi = Volume::find($comicBooks); //ritorna: Undefined variable: title 
-        return view('comics.show', compact('volumi'));
+       // $volumi = Volume::find($title); ritorna: Undefined variable: title 
+            return view('comics.show', compact('comic'));
     }
 
     /**
