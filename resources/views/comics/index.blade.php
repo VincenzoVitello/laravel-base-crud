@@ -18,7 +18,11 @@
                 <div class="buttons_container">
                     <a href="{{route("comics.show", $volume->id)}}"><button type="button" class="show_button">vedi</button></a>
                     <a href="{{route("comics.edit", $volume->id)}}"><button type="button" class="show_button">modifica</button></a>
-
+                    <form action="{{route("comics.destroy", $volume->id)}}" method="POST">
+                        @csrf
+                        @method("DELETE")
+                        <button type="submit" class="delete_button">Elimina</button>
+                    </form>
                 </div>
             </div>
     @endforeach
