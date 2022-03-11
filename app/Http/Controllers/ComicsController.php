@@ -44,6 +44,7 @@ class ComicsController extends Controller
         $newComic->series = $data['series'];
         $newComic->sale_date = $data['sale_date'];
         $newComic->save();
+        return redirect()->route('comics.index');
     }
 
     /**
