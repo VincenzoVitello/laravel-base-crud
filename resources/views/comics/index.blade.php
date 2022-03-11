@@ -5,6 +5,8 @@
 @endsection
 
 @section('content')
+<a href="{{route("comics.create")}}"><button type="button" class="show_button">Aggiungi</button></a>
+
     <div class="container">
         @foreach($volumi as $volume)
             <div class="comic_card">
@@ -15,6 +17,8 @@
                 <p>Data di pubblicazione: {{$volume->sale_date}}</p>
                 <div class="buttons_container">
                     <a href="{{route("comics.show", $volume->id)}}"><button type="button" class="show_button">vedi</button></a>
+                    <a href="{{route("comics.edit", $volume->id)}}"><button type="button" class="show_button">modifica</button></a>
+
                 </div>
             </div>
     @endforeach
