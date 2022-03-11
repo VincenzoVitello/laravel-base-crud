@@ -79,19 +79,19 @@ class ComicsController extends Controller
     public function update(Request $request, Volume $comic)
     {   
         $data = $request->all();
-        $newComic = new Volume();
-        $newComic->title = $data['title'];
-        $newComic->description = $data['description'];
+        
+        $comic->title = $data['title'];
+        $comic->description = $data['description'];
         if(!empty($data['thumb'])){
-            $newComic->thumb = $data['thumb'];
+            $comic->thumb = $data['thumb'];
         };
-        $newComic->price = $data['price'];
-        $newComic->series = $data['series'];
-        $newComic->sale_date = $data['sale_date'];
+        $comic->price = $data['price'];
+        $comic->series = $data['series'];
+        $comic->sale_date = $data['sale_date'];
 
-        $newComic->save();
+        $comic->save();
 
-        return redirect()->route('comics.show', $comic->id);
+        return redirect()->route('comics.index', $comic->id);
     }
 
     /**

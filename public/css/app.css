@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   width: 1200px;
   margin: auto;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .container .comic_card {
@@ -29,13 +29,13 @@
 
 .back_button {
   background-color: aliceblue;
-  color: white;
+  color: black;
   padding: 10px 20px;
 }
 
 .show_button {
-  background-color: aqua;
-  color: white;
+  background-color: grey;
+  color: black;
   padding: 10px 20px;
 }
 
